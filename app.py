@@ -77,15 +77,41 @@ def predict(email):
 if 'emails' not in st.session_state:
     # Tập dữ liệu huấn luyện ban đầu của bạn
     st.session_state.emails = [
-        'Buy cheap medicine now!', 'Hey, how are you doing today?', 
-        'Congratulations, you have won a free ticket!', 'Meeting tomorrow at 10am.', 
-        'Limited offer, buy one get one free!', 'Can we schedule a call for next week?', 
-        'Win a free iPhone, click here!', 'Are you coming to the party tonight?', 
-        'Big opportunity right now!', 'We will discussion tommorow on the opportunity of cooperation', 
-        'This is your exercise today', 'Get your degree for free', 'Exam result', 
-        'Your ticket for Newyork.', 'Your flight reservation'
+        'Buy cheap medicine now!', 
+    'Hey, how are you doing today?', 
+    'Congratulations, you have won a free ticket!', 
+    'Meeting tomorrow at 10am.', 
+    'Limited offer, buy one get one free!', 
+    'Can we schedule a call for next week?', 
+    'Win a free iPhone, click here!', 
+    'Are you coming to the party tonight?', 
+    'Big opportunity right now!', 
+    'We will discussion tommorow on the opportunity of cooperation', 
+    'This is your exercise today', 
+    'Get your degree for free', 
+    'Exam result', 
+    'Your ticket for Newyork.', 
+    'Your flight reservation', 
+    ############################################# 
+    'Buy cheap medicine and stuff now!', 
+    'Goodm morning, how are you?', 
+    'Congratulations, you won a free present!', 
+    'Meeting tomorrow at 2pm.', 
+    'Limited offer, hurry up!', 
+    'Can we schedule a call for next meeting?', 
+    'Win a free luxury car, click here!', 
+    'Are you coming to the restaurant tonight?', 
+    'Big opportunity, take it!', 
+    'We will discussion later', 
+    'These are the exercises today', 
+    'Free degree', 
+    'The final exam result', 
+    'Your ticket for Newyork is available.', 
+    'Your flight reservation is 2002345'
     ]
     st.session_state.labels = [
+        'spam', 'ham', 'spam', 'ham', 'spam', 'ham', 'spam', 'ham', 'spam', 
+        'ham', 'ham', 'spam', 'ham', 'ham', 'ham', 
         'spam', 'ham', 'spam', 'ham', 'spam', 'ham', 'spam', 'ham', 'spam', 
         'ham', 'ham', 'spam', 'ham', 'ham', 'ham'
     ]
