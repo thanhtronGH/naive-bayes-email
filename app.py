@@ -1,7 +1,7 @@
 import streamlit as st
 from naiveBayesLib import *
 from streamlit_gsheets import GSheetsConnection
-
+import pandas as pd
 # Connect to google sheet
 conn = st.connection("gsheets", type=GSheetsConnection)
 
@@ -63,9 +63,7 @@ if "result" in st.session_state:
 
     with col1:
         if st.button("Correct to Spam"):
-            st.session_state.emails.append(
-                st.session_state.email
-            )
+            st.session_state.emails.append(st.session_state.email)
             st.session_state.labels.append("spam")
             train_model()
             st.success("Model Updated!")
