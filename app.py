@@ -1,9 +1,7 @@
 import streamlit as st
 from naiveBayesLib import *
-from streamlit_gsheets import 
-# ===========================
-# INITIAL DATA
-# ===========================
+from streamlit_gsheets import GSheetsConnection
+
 # Connect to google sheet
 conn = st.connection("gsheets", type=GSheetsConnection)
 
