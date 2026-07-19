@@ -65,15 +65,26 @@ if "result" in st.session_state:
         if st.button("Correct to Spam"):
             st.session_state.emails.append(st.session_state.email)
             st.session_state.labels.append("spam")
+            # Generate new data frame
+            new_df = pd.DataFrame({
+                "emails": st.session_state.emails, 
+                "labels": st.session_state.labels
+            })
+            conn.update(data=new_df) # Post data to gg sheet
+            
             train_model()
             st.success("Model Updated!")
 
     with col2:
         if st.button("Correct to Ham"):
-            st.session_state.emails.append(
-                st.session_state.email
-            )
+            st.session_state.emails.append(st.session_state.email)
             st.session_state.labels.append("ham")
+            # Generate new data frame
+            new_df = pd.DataFrame({
+                "emails": st.session_state.emails, 
+                "labels": st.session_state.labels
+            })
+            conn.update(data=new_df) # Post data to gg sheet
             train_model()
             st.success("Model Updated!")
 
